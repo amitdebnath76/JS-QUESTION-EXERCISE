@@ -87,22 +87,32 @@
 
 // Ex---10 checking two array--are they equal.
 
-const arrayAreEqual = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  return arr1.every((currentVal, index) => currentVal === arr2[index]);
-};
-console.log(arrayAreEqual([1, 2, 3], [2, 3, 4]));
-console.log(arrayAreEqual([1, 2, 3], [1, 2, 3]));
-console.log(arrayAreEqual([1, 2, 3], [1, 3, 2]));
+// const arrayAreEqual = (arr1, arr2) => {
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   }
+//   return arr1.every((currentVal, index) => currentVal === arr2[index]);
+// };
+// console.log(arrayAreEqual([1, 2, 3], [2, 3, 4]));
+// console.log(arrayAreEqual([1, 2, 3], [1, 2, 3]));
+// console.log(arrayAreEqual([1, 2, 3], [1, 3, 2]));
 
 // Ex--10--2nd part(In React, you might use every() to check if all required fields in a form are filled out before allowing a user to submit.)
-const formFields = [
-  { name: "username", value: "JohnDoe" },
-  { name: "email", value: "johndoe@example.com" },
-  { name: "password", value: "" },
-];
+// const formFields = [
+//   { name: "username", value: "JohnDoe" },
+//   { name: "email", value: "johndoe@example.com" },
+//   { name: "password", value: "" },
+// ];
 
-const allFieldsFilled = formFields.every((field) => field.value !== "");
-console.log(allFieldsFilled);
+// const allFieldsFilled = formFields.every((field) => field.value !== "");
+// console.log(allFieldsFilled);
+
+// Ex-11---User put an interzer value, write a function that can calculate the sum of input value
+
+const sumOfInput = (value)=>{
+    let newValue = Array.from(String(value),Number)
+    console.log(newValue)
+   return newValue.reduce((a,b) => a+=b)
+}
+
+console.log(sumOfInput(123456))
