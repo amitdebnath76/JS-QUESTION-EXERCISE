@@ -1,4 +1,5 @@
 // Ex-01
+
 // let numOne = 12;
 // let numTwo = 15;
 // const sum = numOne + numTwo;
@@ -72,16 +73,36 @@
 // console.log(calculateFactorial(0))
 
 // Ex-09--calculating average of an array
-const calculateAverage =(arr)=>{
-    let count = 0;
-    for(let i of arr){
-        count = count +i
-        console.log(count)
-        // let ave = ;
-        
-    }
-    return (count / arr.length)
-}
-console.log(calculateAverage([1,2,3,4,5,6]))
+// const calculateAverage =(arr)=>{
+//     let count = 0;
+//     for(let i of arr){
+//         count = count +i
+//         console.log(count)
+//         // let ave = ;
 
-// Ex---10 for js
+//     }
+//     return (count / arr.length)
+// }
+// console.log(calculateAverage([1,2,3,4,5,6]))
+
+// Ex---10 checking two array--are they equal.
+
+const arrayAreEqual = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  return arr1.every((currentVal, index) => currentVal === arr2[index]);
+};
+console.log(arrayAreEqual([1, 2, 3], [2, 3, 4]));
+console.log(arrayAreEqual([1, 2, 3], [1, 2, 3]));
+console.log(arrayAreEqual([1, 2, 3], [1, 3, 2]));
+
+// Ex--10--2nd part(In React, you might use every() to check if all required fields in a form are filled out before allowing a user to submit.)
+const formFields = [
+  { name: "username", value: "JohnDoe" },
+  { name: "email", value: "johndoe@example.com" },
+  { name: "password", value: "" },
+];
+
+const allFieldsFilled = formFields.every((field) => field.value !== "");
+console.log(allFieldsFilled);
