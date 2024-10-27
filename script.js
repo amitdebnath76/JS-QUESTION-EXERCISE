@@ -83,3 +83,5 @@ const calculateAverage =(arr)=>{
     return (count / arr.length)
 }
 console.log(calculateAverage([1,2,3,4,5,6]))
+
+// Ex---10 for js
