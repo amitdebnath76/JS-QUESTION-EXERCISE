@@ -109,10 +109,50 @@
 
 // Ex-11---User put an interzer value, write a function that can calculate the sum of input value
 
-const sumOfInput = (value)=>{
-    let newValue = Array.from(String(value),Number)
-    console.log(newValue)
-   return newValue.reduce((a,b) => a+=b)
-}
+// const sumOfInput = (value)=>{
+//     let newValue = Array.from(String(value),Number)
+//     console.log(newValue)
+//    return newValue.reduce((a,b) => a+=b)
+// }
 
-console.log(sumOfInput(123456))
+// console.log(sumOfInput(123456))
+
+// EX-12 --Remove duplicate of an array---also return a new array--
+// const removeDuplicate = (arr)=>{
+//     let newArray = [...new Set(arr)];
+//     return newArray.sort((a,b)=> a-b)
+
+// }
+// console.log(removeDuplicate([1,2,3,14,5,6,1,27,33,18]))
+// console.log(removeDuplicate([1,21,3,4,54,6,1,2,3,18]))
+
+// Ex--13---write a function that takes a strings,if the string element match with any vowel element count the total number of string will match
+// const countVowel = (str)=>{
+//     const vowel = ['a','e','i','o','u']
+//     let newStr = str.toLowerCase().split('');
+//     let count = 0
+//     for(char of newStr){
+//         if(vowel.includes(char)){
+//             count++
+//         }
+       
+//     }
+//     return count
+ 
+// }
+// console.log(countVowel('Bangladesh'))
+// console.log(countVowel('I am learning front end Web development '))
+
+
+// EX--14--write a function that takes a number,check if the number is equal to power of 2 return true,else false
+const isPowerOfTwo= (num)=>{
+    for(let i =1;i<num; i++){
+        if(2**i===num){
+            return true
+        }
+        return false
+    }
+} 
+console.log(isPowerOfTwo(7))
+console.log(isPowerOfTwo(8))
+console.log(isPowerOfTwo(12))
