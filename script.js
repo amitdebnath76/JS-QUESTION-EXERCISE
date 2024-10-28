@@ -146,12 +146,14 @@
 
 // EX--14--write a function that takes a number,check if the number is equal to power of 2 return true,else false
 const isPowerOfTwo= (num)=>{
+    // let op = false
     for(let i =1;i<num; i++){
         if(2**i===num){
             return true
         }
-        return false
+       
     }
+    return false
 } 
 console.log(isPowerOfTwo(7))
 console.log(isPowerOfTwo(8))
