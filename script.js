@@ -145,16 +145,28 @@
 
 
 // EX--14--write a function that takes a number,check if the number is equal to power of 2 return true,else false
-const isPowerOfTwo= (num)=>{
-    // let op = false
-    for(let i =1;i<num; i++){
-        if(2**i===num){
-            return true
-        }
+// const isPowerOfTwo= (num)=>{
+//     // let op = false
+//     for(let i =1;i<num; i++){
+//         if(2**i===num){
+//             return true
+//         }
        
-    }
-    return false
-} 
-console.log(isPowerOfTwo(7))
-console.log(isPowerOfTwo(8))
-console.log(isPowerOfTwo(12))
+//     }
+//     return false
+// } 
+// console.log(isPowerOfTwo(7))
+// console.log(isPowerOfTwo(8))
+// console.log(isPowerOfTwo(12))
+
+
+// EX-15--write a function to calculate the sum of square of all element in an array.
+const sumOfSquare = (arr) =>{
+   let newArr=  arr.map((element) => element*element)
+   let sum = 0;
+   for(i of newArr)
+    sum = sum+i
+   return sum
+
+}
+console.log(sumOfSquare([1,2,3,4,5,78]))
