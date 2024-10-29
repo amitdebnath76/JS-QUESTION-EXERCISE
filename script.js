@@ -161,12 +161,43 @@
 
 
 // EX-15--write a function to calculate the sum of square of all element in an array.
-const sumOfSquare = (arr) =>{
-   let newArr=  arr.map((element) => element*element)
-   let sum = 0;
-   for(i of newArr)
-    sum = sum+i
-   return sum
+// const sumOfSquare = (arr) =>{
+//    let newArr=  arr.map((element) => element*element)
+//    let sum = 0;
+//    for(i of newArr)
+//     sum = sum+i
+//    return sum
+
+// }
+// console.log(sumOfSquare([1,2,3,4,5,78]))
+
+// EX--16  Write a function findMin that takes an array of number as input and returns the min value of this array.
+// const findMin = (arr)=>{
+//    let newArr = arr.sort((a,b)=>a-b)
+//    return newArr[0]
+// }
+// console.log(findMin([25,23,81,12,4,45,46]))
+// console.log(findMin([25,23,-81,12,-4,45,46]))
+
+// Ex-17-write a function to convert a string to camelcase and  snake-case
+
+const toCamelCase =(str)=>{
+
+   // Snake case
+   // let newStr = str.toLowerCase().split(' ').join("_")
+   // return newStr
+
+   // Camel Case
+   str = str.split(' ');
+      str = str.map((word,index)=>{
+      if(index ===0){
+        return word.toLowerCase()
+      }else{
+         return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+      }
+   })
+    return str.join('')
 
 }
-console.log(sumOfSquare([1,2,3,4,5,78]))
+console.log(toCamelCase('hello WorLD'))
+console.log(toCamelCase('wev development is not easy'))
