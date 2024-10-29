@@ -181,23 +181,48 @@
 
 // Ex-17-write a function to convert a string to camelcase and  snake-case
 
-const toCamelCase =(str)=>{
+// const toCamelCase =(str)=>{
 
-   // Snake case
-   // let newStr = str.toLowerCase().split(' ').join("_")
-   // return newStr
+//    Snake case//
+//    let newStr = str.toLowerCase().split(' ').join("_")
+//    return newStr
 
-   // Camel Case
-   str = str.split(' ');
-      str = str.map((word,index)=>{
-      if(index ===0){
-        return word.toLowerCase()
-      }else{
-         return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-      }
-   })
-    return str.join('')
+//    Camel Case///
+//    str = str.split(' ');
+//       str = str.map((word,index)=>{
+//       if(index ===0){
+//         return word.toLowerCase()
+//       }else{
+//          return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+//       }
+//    })
+//     return str.join('')
 
+// }
+// console.log(toCamelCase('hello WorLD'))
+// console.log(toCamelCase('wev development is not easy'))
+
+// EX-18---write a function to check if a cheracter is upper case or lowercase
+
+// const chechAlpha = (char)=>{
+//    if(char === char.toUpperCase()){
+//       return("Charter is Uppercase")
+//    }
+//    return ('Charter is Lowercase')
+// }
+// console.log(chechAlpha('a'))
+// console.log(chechAlpha('B'))
+
+// EX--19---Write a function to check if a given string starts with a spefic substring
+const checkSubStr = (str, subStr)=>{
+   let newStr = str.toLowerCase().split(' ')
+   console.log(newStr)
+   if(subStr.toLowerCase() === newStr[0]){
+      return true
+   }
+   return false
 }
-console.log(toCamelCase('hello WorLD'))
-console.log(toCamelCase('wev development is not easy'))
+console.log(checkSubStr('Hello Programer', 'Hello'));
+console.log(checkSubStr('Hello Programer', 'Program'));
+console.log(checkSubStr('program for Hello Programer', 'Program'));
+console.log(checkSubStr('have you win yet', 'Have'));
