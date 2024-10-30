@@ -214,15 +214,28 @@
 // console.log(chechAlpha('B'))
 
 // EX--19---Write a function to check if a given string starts with a spefic substring
-const checkSubStr = (str, subStr)=>{
-   let newStr = str.toLowerCase().split(' ')
-   console.log(newStr)
-   if(subStr.toLowerCase() === newStr[0]){
-      return true
+// const checkSubStr = (str, subStr)=>{
+//    let newStr = str.toLowerCase().split(' ')
+//    console.log(newStr)
+//    if(subStr.toLowerCase() === newStr[0]){
+//       return true
+//    }
+//    return false
+// }
+// console.log(checkSubStr('Hello Programer', 'Hello'));
+// console.log(checkSubStr('Hello Programer', 'Program'));
+// console.log(checkSubStr('program for Hello Programer', 'Program'));
+// console.log(checkSubStr('have you win yet', 'Have'));
+
+// Ex-20---Write a function that takes an array as an input,output will be reverse string, but you can not use built in method or function to solve this problem
+
+
+const reverseString = (str) =>{
+   let output_str = ''
+   for (let i = str.length -1 ; i >=0;i--){
+    output_str = output_str + str[i]
+      console.log(str[i])
    }
-   return false
+     return  output_str
 }
-console.log(checkSubStr('Hello Programer', 'Hello'));
-console.log(checkSubStr('Hello Programer', 'Program'));
-console.log(checkSubStr('program for Hello Programer', 'Program'));
-console.log(checkSubStr('have you win yet', 'Have'));
+console.log(reverseString('Bangladesh'))
