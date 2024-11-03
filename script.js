@@ -230,12 +230,42 @@
 // Ex-20---Write a function that takes an array as an input,output will be reverse string, but you can not use built in method or function to solve this problem
 
 
-const reverseString = (str) =>{
-   let output_str = ''
-   for (let i = str.length -1 ; i >=0;i--){
-    output_str = output_str + str[i]
-      console.log(str[i])
-   }
-     return  output_str
+// const reverseString = (str) =>{
+//    let output_str = ''
+//    for (let i = str.length -1 ; i >=0;i--){
+//     output_str = output_str + str[i]
+//       console.log(str[i])
+//    }
+//      return  output_str
+// }
+// console.log(reverseString('Bangladesh'))
+
+
+// EX-21--Write a function called calculateMean that takes an array of number as input and return the mean of those number.
+
+// const calCulateMean = (arr)=>{
+//   let mean = 0; 
+//   if (arr.length===0){
+//     return 0
+//   }
+// for (let i of arr){
+//   // console.log(i)
+  
+//  mean = mean + i
+ 
+// }
+// return mean/arr.length
+// }
+// console.log(calCulateMean([1,12,14,15,18,120]))
+// console.log(calCulateMean([]))
+
+// Alternative---21
+const calCulateMean = (arr)=>{
+  if (arr.length===0){
+    return 0
+  }
+let sum =  arr.reduce((a,b)=> a+b,0)
+  return sum/arr.length
 }
-console.log(reverseString('Bangladesh'))
+console.log(calCulateMean([1,12,14,15,18,120]))
+console.log(calCulateMean([]))
