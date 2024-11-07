@@ -260,12 +260,30 @@
 // console.log(calCulateMean([]))
 
 // Alternative---21
-const calCulateMean = (arr)=>{
-  if (arr.length===0){
-    return 0
-  }
-let sum =  arr.reduce((a,b)=> a+b,0)
-  return sum/arr.length
+// const calCulateMean = (arr)=>{
+//   if (arr.length===0){
+//     return 0
+//   }
+// let sum =  arr.reduce((a,b)=> a+b,0)
+//   return sum/arr.length
+// }
+// console.log(calCulateMean([1,12,14,15,18,120]))
+// console.log(calCulateMean([]))
+
+// ///////------
+// const user = {
+//   fristName: "Anushka",
+//   getName(){
+//     const fristName = 'Rai';
+//     return this.fristName
+//   }
+// }
+// console.log(user.getName())
+
+// EX----23
+const numbers = [1,2,2,3,1,2,3,4,4]
+let counts = {}
+for(let element of numbers){
+  counts[element] = (counts[element] || 0) +1 
 }
-console.log(calCulateMean([1,12,14,15,18,120]))
-console.log(calCulateMean([]))
+console.log(counts)
